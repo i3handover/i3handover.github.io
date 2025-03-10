@@ -159,10 +159,23 @@ body {
 
 
 .side_by_side{
-  width: 100%s;
-  /* max-width: 100%; */
-  display: block;
-  margin: 0 auto;
-  padding-right: 2vh;
+  max-width: 50%;
+  margin: 0;
+  padding: 0;
   
 }
+
+  .model-viewer {
+    width: 100%;
+    max-width: 500px;    
+    aspect-ratio: 2 / 1;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    min-height: max-content;
+  }
+  @media screen and (max-width: 768px) {
+    .model-viewer {
+      height: 300px;
+    }
+  }
+

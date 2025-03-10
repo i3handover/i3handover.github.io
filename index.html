@@ -65,21 +65,21 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="#"
+                <a href="https://arxiv.org/pdf/2503.03579"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper (Coming Soon)</span>
+                  <span>Paper</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="#"
+                <a href="https://arxiv.org/pdf/2503.03579"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv (Coming Soon)</span>
+                  <span>arXiv</span>
                 </a>
               </span>
               <span class="link-block">
@@ -122,7 +122,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3" id="video">Abstract</h2>
         <div class="content has-text-justified">
           <p>
             We propose a novel system for robot-to-human object handover that emulates human coworker interactions. Unlike most existing studies that focus primarily on grasping strategies and motion planning, 
@@ -130,26 +130,53 @@
         </div>
       </div>
     </div>
-
 </section>
 
 
-<!-- STL Viewer -->
+<!-- Mesh files Viewers -->
 <section class="section">
-  <div class="container is-centered has-text-centered">
-    <h2 class="title is-3">Interactive Diffusion Results</h2>
-    <div class="columns">
-      <div class="column has-text-centered">
-        <div id="model-viewer" 
-             style="width: 1000px; height: 500px; border: 1px solid #ccc; margin: 0 auto;">
-        </div>
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title ">Interactive Diffusion Results</h2>
+    <div class="content has-text-justified">
+    <p>We applied the proposed generation method to various daily household items, producing results that define the spatial relationship between the robotic gripper, the object, and the human hand. The following are the visualization results.</p>
+  </div>
+    <div class="columns ">
+      <div class="column">
+        <div class="model-viewer" id="model-viewer1"></div>
+      </div>
+      <div class="column">
+        <div class="model-viewer" id="model-viewer2"></div>
       </div>
     </div>
+    <div class="columns ">
+      <div class="column">
+        <div class="model-viewer" id="model-viewer3"></div>
+      </div>
+      <div class="column">
+        <div class="model-viewer" id="model-viewer4"></div>
+      </div>
+    </div>
+    <div class="columns ">
+      <div class="column">
+        <div class="model-viewer" id="model-viewer5"></div>
+      </div>
+      <div class="column">
+        <div class="model-viewer" id="model-viewer6"></div>
+      </div>
+    </div> 
   </div>
 </section>
 
+
 <script>
-  initViewerObjPly('model-viewer', './static/mesh/knife_eef_0.obj', './static/mesh/knife_right_hand_0.obj',  './static/mesh/knife_right_hand_0.ply');
+  initViewerObjPly('model-viewer1', './static/mesh/gamecontroller/gamecontroller_eef_0.obj', './static/mesh/gamecontroller/gamecontroller_right_hand_0.obj',  './static/mesh/gamecontroller/gamecontroller_right_hand_0.ply');
+  initViewerObjPly('model-viewer2', './static/mesh/knife/knife_eef_0.obj', './static/mesh/knife/knife_right_hand_0.obj',  './static/mesh/knife/knife_right_hand_0.ply');
+  initViewerObjPly('model-viewer3', './static/mesh/drill/drill_eef_0.obj', './static/mesh/drill/drill_right_hand_0.obj',  './static/mesh/drill/drill_right_hand_0.ply');
+  initViewerObjPly('model-viewer4', './static/mesh/headphones/headphones_eef_0.obj', './static/mesh/headphones/headphones_right_hand_0.obj',  './static/mesh/headphones/headphones_right_hand_0.ply');
+  initViewerObjPly('model-viewer5', './static/mesh/binoculars/binoculars_eef_0.obj', './static/mesh/binoculars/binoculars_right_hand_0.obj',  './static/mesh/binoculars/binoculars_right_hand_0.ply');
+  initViewerObjPly('model-viewer6', './static/mesh/eyeglasses/eyeglasses_eef_0.obj', './static/mesh/eyeglasses/eyeglasses_right_hand_0.obj',  './static/mesh/eyeglasses/eyeglasses_right_hand_0.ply');
+
+</script>
 </script>
 
 
