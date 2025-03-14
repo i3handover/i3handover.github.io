@@ -144,40 +144,122 @@
   </div>
 </section>
 
-
-<!-- Mesh files Viewers -->
 <section class="section">
-  <div class="container is-max-desktop has-text-centered">
-    <h2 class="title ">Interactive Diffusion Results</h2>
-    <div class="content has-text-justified">
-    <p>We applied the proposed generation method to various daily household items, producing results that define the spatial relationship between the robotic gripper, the object, and the human hand. The following are the visualization results.</p>
-  </div>
-    <div class="columns ">
-      <div class="column">
-        <div class="model-viewer" id="model-viewer1"></div>
-      </div>
-      <div class="column">
-        <div class="model-viewer" id="model-viewer2"></div>
-      </div>
-    </div>
-    <div class="columns ">
-      <div class="column">
-        <div class="model-viewer" id="model-viewer3"></div>
-      </div>
-      <div class="column">
-        <div class="model-viewer" id="model-viewer4"></div>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" >Methods</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our method is structured into three key stages: handover intents inferring, handover configuration imagery, and handover pose matching.
+            </p>
+            <img src="./static/images/pipeline.png"
+            alt="Methodology"/>
+          
+          </div>
       </div>
     </div>
-    <div class="columns ">
-      <div class="column">
-        <div class="model-viewer" id="model-viewer5"></div>
+
+    <br/>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h4 class="title is-5"> - Handover Intents Inferring</h4>
+        <div class="content has-text-justified">
+          <p>
+            We propose a handover intent recognition method using MLLMs to interpret <b>verbal instructions</b> and <b>visual gestures</b>.
+             Our model processes a text description and an image of the receiving hand to identify the <b>tool</b> and <b>hand type</b>, generating structured outputs like “Pass the game controller to the right hand of the human.”
+            </p>
+            <img src="./static/images/LLM.png"
+            style="width: 80%; height: 80%"
+            alt="LLM - Handover Intents Inferring "/>
+          </div>
       </div>
-      <div class="column">
-        <div class="model-viewer" id="model-viewer6"></div>
+    </div>
+
+    <br/>    
+    <div class="columns is-centered ">
+      <div class="column is-four-fifths">
+        <h4 class="title is-5"> - Handover Configuration Imagery</h4>
+        <div class="content has-text-justified">
+          <p>
+            We introduce a diffusion-based generative model for 3D handover configuration, conditioned on text prompts derived from the recognized intent.
+             This approach enables the generation of spatial relationships among the <b>robotic gripper, the object</b>, and <b>the human hand</b>.
+          </p>
+            <img src="./static/images/diffusion.png"
+            alt="Handover Configuration Imagery."/>
+          </div>
       </div>
-    </div> 
+    </div>
+
+    <br/>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h4 class="title is-5"> - Handover Pose Matching</h4>
+        <div class="content has-text-justified">
+          <p>
+            We propose a matching approach to align the generated hand with the real-world hand, preventing contact between the hand and the robotic gripper to ensure the safe handover.
+          </p>
+            <img src="./static/images/matching.png"
+            alt="Handover Pose Matching."/>
+          </div>
+      </div>
+    </div>
+
   </div>
 </section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered ">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered" id="video">Experiments</h2>
+        <div class="content has-text-justified">
+          <p>
+            The tests were conducted in both simulation and real hardware. The proposed robotic handover system achieves 80%–93% success rates in real and simulated environments. The total execution time is 9–10 seconds, with 1/3 spent on configuration generation and 2/3 on execution.
+            </p>
+            <img src="./static/images/setup.png"
+            alt="Interpolate start reference image."/>
+          </div>
+          <br/>
+
+          <h4 class="title is-5 is-left "> - Generated Results</h4>
+
+          <div class="content has-text-justified">
+            <p>We applied the proposed generation method to various daily household items, producing results that define the spatial relationship between the robotic gripper, the object, and the human hand. The following are the visualization results.</p>
+          </div>
+
+      </div>
+    </div>
+      <div class="columns ">
+        <div class="column">
+          <div class="model-viewer" id="model-viewer1"></div>
+        </div>
+        <div class="column">
+          <div class="model-viewer" id="model-viewer2"></div>
+        </div>
+      </div>
+      <div class="columns ">
+        <div class="column">
+          <div class="model-viewer" id="model-viewer3"></div>
+        </div>
+        <div class="column">
+          <div class="model-viewer" id="model-viewer4"></div>
+        </div>
+      </div>
+      <div class="columns ">
+        <div class="column">
+          <div class="model-viewer" id="model-viewer5"></div>
+        </div>
+        <div class="column">
+          <div class="model-viewer" id="model-viewer6"></div>
+        </div>
+      </div> 
+    </div>
+
+</section>
+
 
 
 <script>
